@@ -3,30 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>환영합니다</title>
+    <title>SONO VAULT | 소노 볼트</title>
+    <!-- 고급스러운 산돌고딕/명조계열 웹 폰트 적용 -->
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-main: #f4f4f0;
+            --text-muted: #888888;
+            --accent-color: #d4af37; /* 따뜻한 나무의 공명과 황동을 상징하는 색상 */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 메인 히어로 섹션 */
+        .hero {
+            position: relative;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f8f9fa;
-        }
-        .box {
             text-align: center;
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* 소리의 파동(Resonance)을 표현하는 CSS 애니메이션 */
+        .resonance-ring {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            animation: pulse 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .resonance-ring:nth-child(2) { animation-delay: 1s; }
+        .resonance-ring:nth-child(3) { animation-delay: 2s; }
+
+        @keyframes pulse {
+            0% { transform: scale(0.5); opacity: 1; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+
+        .hero-content {
+            z-index: 10;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            letter-spacing: 0.1em;
+            font-weight: 200;
+        }
+
+        /* 철학 섹션 */
+        .philosophy {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .philosophy h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 50px;
+            color: var(--text-main);
+        }
+
+        .philosophy p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            word-break: keep-all;
+            line-height: 1.9;
+        }
+
+        .philosophy .highlight {
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        /* 다이어그램/공학적 느낌을 주는 장식 선 */
+        .engineering-line {
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--accent-color), transparent);
+            margin: 0 auto 50px auto;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>새로운 홈페이지 준비 중입니다</h1>
-        <p>정상적으로 깃허브 페이지와 연결되었습니다.</p>
-    </div>
+
+    <!-- 공간의 울림을 표현하는 메인 화면 -->
+    <section class="hero">
+        <div class="resonance-ring"></div>
+        <div class="resonance-ring"></div>
+        <div class="resonance-ring"></div>
+        
+        <div class="hero-content">
+            <h1>SONO VAULT</h1>
+            <p>소리가 담긴 상자, 영혼을 정화하는 공간</p>
+        </div>
+    </section>
+
+    <div class="engineering-line"></div>
+
+    <!-- 교수님의 철학을 담은 섹션 -->
+    <section class="philosophy">
+        <h2>공간이라는 거대한 악기</h2>
+        <p>모든 것이 전자적으로 가공되는 세상 속에서,<br>공간에 울리는 소리만큼 자연스럽고 천연스러운 것은 없습니다.</p>
+        <p>소노 볼트(Sono Vault)는 소리를 단순히 제어하는 것을 넘어,<br><span class="highlight">공간 자체를 하나의 거대한 악기로 상상합니다.</span></p>
+        <p>눈을 감고 그 공간 속에서 소리를 울려낼 때, 소리는 비로소 공간을 통해 새로운 생명으로 재창조됩니다.<br>가장 아름답고 자연스러운 본연의 소리, 그 순수함에 닿고자 하는 것이 우리의 철학입니다.</p>
+        <p>이 사유의 상자 안에서, 우리는 마음껏 소리를 음미하고 영혼을 정화합니다.<br>범용적 실용성과 공간 음향에 대한 깊은 철학이 만나는 곳, 소노 볼트가 그 울림을 시작합니다.</p>
+    </section>
+
+    <!-- 하단 정보 -->
+    <footer>
+        <p>&copy; 2026 Sono Vault. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #555;">Acoustic Engineering & Spatial Audio Design</p>
+    </footer>
+
 </body>
 </html>
